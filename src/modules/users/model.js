@@ -16,6 +16,15 @@ const NEW_USER = `
    RETURNING *
 `
 
+const USER_DELETE = `
+DELETE
+ FROM 
+ users
+WHERE user_id = ($1);
+`
+
+
+
 const users = () => fetchAll(USERS)
 const newUser = (userName, email, password) => fetch(
     NEW_USER,
@@ -24,7 +33,13 @@ const newUser = (userName, email, password) => fetch(
     password
 )
 
+const deleteUser = (userID) => fetch(
+    USER_DELETE,
+    userID
+)
+
 module.exports = {
     users,
-    newUser
+    newUser,
+    deleteUser
 }

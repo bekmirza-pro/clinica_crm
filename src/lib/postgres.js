@@ -1,14 +1,8 @@
-const { DB } = require('../config')
+const { PG } = require('../config')
 
 const { Pool } = require('pg')
 
-const pool = new Pool({
-    host: "localhost",
-    port: 5432,
-    user: "postgres",
-    password: "1111",
-    database: "crm_clinica",
-})
+const pool = new Pool({ connectionString: PG.connectionElString })
 
 
 const fetch = async(query, ...params) => {

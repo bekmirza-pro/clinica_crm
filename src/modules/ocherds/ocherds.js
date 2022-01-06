@@ -11,8 +11,8 @@ module.exports = {
     },
     NEW_OCHERD: async(req, res) => {
         try {
-            const { users, dise_tend_id } = req.body
-            const newOcherds = await model.newOcherds(users, dise_tend_id)
+            const { username, disease_trends } = req.body
+            const newOcherds = await model.newOcherds(username, disease_trends)
             res.json(newOcherds)
         } catch (err) {
             console.log(err.message);

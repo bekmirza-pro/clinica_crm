@@ -23,8 +23,9 @@ module.exports = {
         try {
             const user = await model.login(req.body);
             if (user) {
+                const isAdmin = user.is_admin;
                 const token = sign(user);
-                res.status(302).json({ token, message: "You logged in!" });
+                res.status(302).json({ token, isAdmin, message: "You logged in!" });
             } else {
                 res
                     .status(401)

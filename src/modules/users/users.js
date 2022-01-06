@@ -17,5 +17,14 @@ module.exports = {
         } catch (err) {
             console.log(err.message);
         }
+    },
+    DELETE_USER: async(req, res) => {
+        try {
+            const { userID } = req.params
+            const deleteUser = await model.deleteUser(userID)
+            res.json(deleteUser)
+        } catch (err) {
+            console.log(err.message);
+        }
     }
 }

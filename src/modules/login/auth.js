@@ -22,7 +22,7 @@ const register = async({ username, email, password }) => {
 
 const userLogin = `
     SELECT
-        user_id
+        is_admin
     FROM users
     WHERE user_name = $1 AND password = $2;
 `

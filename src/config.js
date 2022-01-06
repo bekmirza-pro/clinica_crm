@@ -1,10 +1,8 @@
+const PG = {
+    connectionElString: 'postgres://tcducvmm:V8pCLbjQUCuRTwtVFcvsIMEKx4NRjJ8m@queenie.db.elephantsql.com/tcducvmm'
+}
+
 module.exports = {
-    DB: {
-        host: "localhost",
-        port: 5432,
-        user: "postgres",
-        password: "1111",
-        database: "crm_clinica",
-    },
+    PG,
     secretKey: "olma"
 }

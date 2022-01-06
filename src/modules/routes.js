@@ -15,7 +15,7 @@ router
     .get('/admins/users', Users.USER)
     .get('/admins/orders', Orders.OCHERDS)
     .post('/newOcherds', Orders.NEW_OCHERD)
-    // .get('/admins/users/:userID?', AdminSearch.GET)
+    .delete('/admins/users/:userID?', Users.DELETE_USER)
     .get('/home', Clinics.CLINICA)
     .post('/newUser', Users.NEW_USER)
     .get('/diseaseTrends', Disease.DISEASE_TREND)

@@ -3,22 +3,17 @@ INSERT INTO users(
     email,
     password,
     is_admin
-) VALUES (
-    'bekmirza007',
-    'by@mail.com',
-    '123456bek',
-    true
-),
+) VALUES
 (
-    'murod123',
-    'm@gmail.com',
-    '123456murod',
+    'Baxtiyor',
+    'baxti@gmail.com',
+    '123456Baxa',
     false
 ),
 (
-    'mohir123',
-    'm@gmail.com',
-    '123456mohir',
+    'Nodir123',
+    'No@gmail.com',
+    '123456iii',
     false
 );
 
@@ -46,3 +41,9 @@ INSERT INTO ocherds(
 ) VALUES 
 ('Javohir', 1),
 ('Bekmirza', 2);
+
+
+SELECT *
+FROM ocherds 
+INNER JOIN disease_trends
+ON ocherds.dise_tend_id = disease_trends.dis_tend_id;

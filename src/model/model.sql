@@ -24,3 +24,4 @@ CREATE TABLE ocherds(
     users_name varchar(100) not null unique,
     dise_tend_id int REFERENCES disease_trends(dis_tend_id)
 );
+
